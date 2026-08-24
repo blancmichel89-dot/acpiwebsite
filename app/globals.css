@@ -310,3 +310,38 @@ p { margin: 0; }
 .breadcrumb:hover { color: var(--ink); }
 
 .badge-ok { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--ok); }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 760px; }
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper-3);
+  padding: 4px 22px;
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 0;
+  font-weight: 700;
+  font-size: 15.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink-3);
+}
+.faq-item[open] summary::after { content: "−"; }
+.faq-item p {
+  color: var(--ink-2);
+  font-size: 14.5px;
+  line-height: 1.65;
+  padding: 0 0 18px;
+}

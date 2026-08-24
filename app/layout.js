@@ -2,7 +2,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { SITE_URL, SITE_NAME } from "@/lib/site";
+import { GEO, LOCALITY, SITE_URL, SITE_NAME } from "@/lib/site";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -41,6 +41,12 @@ export const metadata = {
       "Artisan à Chamvres (Yonne) : rénovation intérieure et pose de cuisine sur-mesure, devis gratuit.",
   },
   robots: { index: true, follow: true },
+  other: {
+    "geo.position": `${GEO.latitude};${GEO.longitude}`,
+    "geo.placename": LOCALITY,
+    "geo.region": "FR-89",
+    ICBM: `${GEO.latitude}, ${GEO.longitude}`,
+  },
 };
 
 export const viewport = {

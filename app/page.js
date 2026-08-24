@@ -3,7 +3,8 @@ import Link from "next/link";
 import {
   KitchenIcon, RenovationIcon, BathroomIcon, AtticIcon, InsulationIcon, PaintIcon, WindowIcon, CheckIcon,
 } from "@/components/Icons";
-import { LOCALITY, SERVICE_AREA, SERVICES, TRUST_POINTS } from "@/lib/site";
+import FaqJsonLd from "@/components/FaqJsonLd";
+import { FAQ_ITEMS, LOCALITY, SERVICE_AREA, SERVICES, TRUST_POINTS } from "@/lib/site";
 
 const ICONS = {
   kitchen: KitchenIcon,
@@ -149,6 +150,24 @@ export default function HomePage() {
           <div className="chip-row">
             {SERVICE_AREA.map((city) => (
               <span className="chip" key={city}>{city}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="faq">
+        <div className="wrap">
+          <FaqJsonLd items={FAQ_ITEMS} />
+          <div className="section-head">
+            <div className="eyebrow">Questions fréquentes</div>
+            <h2>Tout ce qu&apos;on nous demande souvent</h2>
+          </div>
+          <div className="faq-list">
+            {FAQ_ITEMS.map((item) => (
+              <details className="faq-item" key={item.question}>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
             ))}
           </div>
         </div>

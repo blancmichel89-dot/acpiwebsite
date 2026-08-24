@@ -1,5 +1,5 @@
 import {
-  CONTACT_EMAIL, CONTACT_PHONE_HREF, LOCALITY, OWNER_NAME, POSTAL_CODE,
+  CONTACT_EMAIL, CONTACT_PHONE_HREF, GEO, LOCALITY, OWNER_NAME, POSTAL_CODE,
   SERVICE_AREA, SIRET, SITE_NAME, SITE_URL, STREET_ADDRESS,
 } from "@/lib/site";
 
@@ -24,6 +24,11 @@ export default function JsonLd() {
       addressLocality: LOCALITY,
       addressRegion: "Bourgogne-Franche-Comté",
       addressCountry: "FR",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: GEO.latitude,
+      longitude: GEO.longitude,
     },
     areaServed: SERVICE_AREA.map((name) => ({ "@type": "City", name })),
     knowsAbout: [
