@@ -1,0 +1,30 @@
+:root {
+  --paper: #faf9f5;
+  --paper-2: #f1efe8;
+  --ink: #211f1b;
+  --ink-2: #4a463e;
+  --ink-3: #8a8578;
+  --line: #dedacd;
+  --chalk: #e3a600;
+  --chalk-ink: #3a2e00;
+  --brick: #b5502d;
+  --ok: #2f8f5b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", "Inter", system-ui, sans-serif;
+}
+
+.num {
+  font-family: "IBM Plex Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+a { color: inherit; }
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; }
