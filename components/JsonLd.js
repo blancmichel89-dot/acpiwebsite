@@ -1,0 +1,36 @@
+import { CONTACT_EMAIL, LOCALITY, SERVICE_AREA, SITE_NAME, SITE_URL } from "@/lib/site";
+
+export default function JsonLd() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "@id": `${SITE_URL}/#business`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    email: CONTACT_EMAIL,
+    description:
+      "Artisan spécialisé en rénovation intérieure et pose de cuisine, basé à Chamvres dans l'Yonne.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: LOCALITY,
+      addressRegion: "Bourgogne-Franche-Comté",
+      addressCountry: "FR",
+    },
+    areaServed: SERVICE_AREA.map((name) => ({ "@type": "City", name })),
+    knowsAbout: [
+      "Rénovation intérieure",
+      "Pose de cuisine",
+      "Rénovation de salle de bain",
+      "Aménagement de combles",
+      "Isolation",
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
