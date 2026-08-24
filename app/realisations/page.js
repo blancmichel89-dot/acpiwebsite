@@ -1,21 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
-import { LOCALITY, SITE_NAME } from "@/lib/site";
+import { LOCALITY, REALISATIONS, SITE_NAME } from "@/lib/site";
 
 export const metadata = {
   title: "Réalisations",
   description:
-    "Chantiers de rénovation intérieure et de pose de cuisine réalisés par Nicobat à Chamvres et dans l'Yonne. Galerie photo en cours de constitution.",
+    "Chantiers de rénovation intérieure et de pose de cuisine réalisés par Nicobat à Chamvres et dans l'Yonne : cuisines, salles de bain, combles, pose de Velux.",
   alternates: { canonical: "/realisations" },
 };
-
-const PROJECTS = [
-  { title: "Pose de cuisine sur-mesure", tag: "Cuisine", desc: "Photos à venir" },
-  { title: "Rénovation intérieure complète", tag: "Rénovation", desc: "Photos à venir" },
-  { title: "Rénovation de salle de bain", tag: "Salle de bain", desc: "Photos à venir" },
-  { title: "Aménagement de combles", tag: "Combles", desc: "Photos à venir" },
-  { title: "Isolation & finitions", tag: "Isolation", desc: "Photos à venir" },
-  { title: "Peinture & revêtements", tag: "Peinture", desc: "Photos à venir" },
-];
 
 export default function RealisationsPage() {
   return (
@@ -29,17 +21,22 @@ export default function RealisationsPage() {
           <p>
             Un aperçu des chantiers de rénovation intérieure et de pose de
             cuisine réalisés par {SITE_NAME} à {LOCALITY} et dans les environs.
-            La galerie photo est en cours de constitution — chaque chantier
-            sera bientôt illustré ici.
+            D&apos;autres photos viendront compléter cette galerie au fil des chantiers.
           </p>
         </div>
 
         <div className="grid grid-3">
-          {PROJECTS.map((p) => (
-            <article className="gallery-item" key={p.title}>
+          {REALISATIONS.map((p) => (
+            <article className="gallery-item" key={p.src}>
               <div className="gallery-thumb">
                 <span className="gallery-tag">{p.tag}</span>
-                {p.desc}
+                <Image
+                  src={p.src}
+                  alt={p.title}
+                  fill
+                  sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  style={{ objectFit: "cover" }}
+                />
               </div>
               <div className="gallery-body">
                 <h3>{p.title}</h3>

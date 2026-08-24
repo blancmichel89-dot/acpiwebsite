@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   KitchenIcon, RenovationIcon, BathroomIcon, AtticIcon, InsulationIcon, PaintIcon, WindowIcon, CheckIcon,
@@ -52,10 +53,18 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hero-visual" role="img" aria-label="Chantier de rénovation Nicobat">
+          <div className="hero-visual">
+            <Image
+              src="/images/realisations/cuisine-1.jpg"
+              alt="Cuisine rénovée par Nicobat"
+              fill
+              priority
+              sizes="(max-width: 900px) 100vw, 45vw"
+              style={{ objectFit: "cover" }}
+            />
             <div className="hero-visual-caption">
-              Pose de cuisine sur-mesure
-              <span>{LOCALITY}, Yonne — galerie complète des chantiers en construction</span>
+              Rénovation de cuisine
+              <span>{LOCALITY}, Yonne</span>
             </div>
           </div>
         </div>
