@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import { MailIcon, PhoneIcon, PinIcon, CheckIcon } from "@/components/Icons";
-import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, LOCALITY, SERVICE_AREA, SITE_NAME } from "@/lib/site";
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, FULL_ADDRESS, LOCALITY, SERVICE_AREA, SITE_NAME } from "@/lib/site";
 
 export const metadata = {
   title: "Contact — Demander un devis",
@@ -53,9 +53,12 @@ export default function ContactPage() {
             <div className="contact-info-row">
               <div className="icon-badge"><PinIcon /></div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: 14.5 }}>Zone d&apos;intervention</div>
+                <div style={{ fontWeight: 700, fontSize: 14.5 }}>Adresse</div>
                 <p style={{ fontSize: 14.5, color: "var(--ink-2)", lineHeight: 1.6, marginTop: 2 }}>
-                  {LOCALITY} et les communes voisines de l&apos;Yonne ({SERVICE_AREA.slice(1, 4).join(", ")}...)
+                  {FULL_ADDRESS}
+                </p>
+                <p style={{ fontSize: 13, color: "var(--ink-3)", lineHeight: 1.6, marginTop: 6 }}>
+                  Intervention à {LOCALITY} et dans les communes voisines de l&apos;Yonne ({SERVICE_AREA.slice(1, 4).join(", ")}...)
                 </p>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, LOCALITY, REGION, SITE_NAME, SERVICES, SERVICE_AREA } from "@/lib/site";
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, FULL_ADDRESS, LOCALITY, OWNER_NAME, REGION, SITE_NAME, SERVICES, SERVICE_AREA } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -14,10 +14,12 @@ export default function Footer() {
               {SITE_NAME}
             </Link>
             <p style={{ color: "var(--ink-2)", fontSize: 14.5, lineHeight: 1.6, maxWidth: 320, marginTop: 14 }}>
-              Artisan spécialisé en rénovation intérieure et pose de cuisine,
-              basé à {LOCALITY} ({REGION}). Devis gratuit, chantier soigné.
+              {OWNER_NAME} — artisan spécialisé en rénovation intérieure et
+              pose de cuisine, basé à {LOCALITY} ({REGION}). Devis gratuit,
+              chantier soigné.
             </p>
-            <p style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 6 }}>
+            <p style={{ marginTop: 16, fontSize: 14.5, color: "var(--ink-2)" }}>{FULL_ADDRESS}</p>
+            <p style={{ marginTop: 10, display: "flex", flexDirection: "column", gap: 6 }}>
               <a href={`tel:${CONTACT_PHONE_HREF}`} style={{ fontSize: 14.5, fontWeight: 700, color: "var(--chalk-2)", textDecoration: "none" }}>
                 {CONTACT_PHONE}
               </a>
@@ -50,7 +52,10 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© {year} {SITE_NAME} — Rénovation intérieure &amp; pose de cuisine.</span>
-          <Link href="/pro" style={{ textDecoration: "none" }}>Espace professionnel</Link>
+          <div style={{ display: "flex", gap: 18 }}>
+            <Link href="/mentions-legales" style={{ textDecoration: "none" }}>Mentions légales</Link>
+            <Link href="/pro" style={{ textDecoration: "none" }}>Espace professionnel</Link>
+          </div>
         </div>
       </div>
     </footer>
