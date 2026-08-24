@@ -24,6 +24,8 @@ export default function JsonLd() {
       "Rénovation de salle de bain",
       "Aménagement de combles",
       "Isolation",
+      "Remplacement de fenêtres et portes",
+      "Pose de fenêtres de toit Velux",
     ],
   };
 

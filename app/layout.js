@@ -19,6 +19,8 @@ export const metadata = {
     "cuisiniste Chamvres",
     "rénovation salle de bain",
     "aménagement combles",
+    "remplacement fenêtres et portes",
+    "pose Velux",
     "Nicobat",
   ],
   authors: [{ name: SITE_NAME }],

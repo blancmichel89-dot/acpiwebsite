@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  KitchenIcon, RenovationIcon, BathroomIcon, AtticIcon, InsulationIcon, PaintIcon, CheckIcon,
+  KitchenIcon, RenovationIcon, BathroomIcon, AtticIcon, InsulationIcon, PaintIcon, WindowIcon, CheckIcon,
 } from "@/components/Icons";
 import { LOCALITY, SERVICE_AREA, SERVICES, TRUST_POINTS } from "@/lib/site";
 
@@ -11,6 +11,7 @@ const ICONS = {
   attic: AtticIcon,
   insulation: InsulationIcon,
   paint: PaintIcon,
+  window: WindowIcon,
 };
 
 const STEPS = [

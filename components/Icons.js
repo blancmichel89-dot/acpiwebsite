@@ -64,6 +64,18 @@ export function PaintIcon(props) {
   );
 }
 
+export function WindowIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <rect x="3.5" y="3.5" width="17" height="17" rx="1.5" />
+      <path d="M12 3.5v17" />
+      <path d="M3.5 12h17" />
+      <path d="M3.5 3.5 8 8" />
+      <path d="M20.5 3.5 16 8" />
+    </svg>
+  );
+}
+
 export function CheckIcon(props) {
   return (
     <svg {...base({ width: 18, height: 18, strokeWidth: 2.4, ...props })}>
