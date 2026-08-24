@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL, LOCALITY, SERVICE_AREA, SITE_NAME, SITE_URL } from "@/lib/site";
+import { CONTACT_EMAIL, CONTACT_PHONE_HREF, LOCALITY, SERVICE_AREA, SITE_NAME, SITE_URL } from "@/lib/site";
 
 export default function JsonLd() {
   const data = {
@@ -8,6 +8,7 @@ export default function JsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     email: CONTACT_EMAIL,
+    telephone: CONTACT_PHONE_HREF,
     description:
       "Artisan spécialisé en rénovation intérieure et pose de cuisine, basé à Chamvres dans l'Yonne.",
     address: {

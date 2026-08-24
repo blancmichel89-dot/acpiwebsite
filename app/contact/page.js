@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
-import { MailIcon, PinIcon, CheckIcon } from "@/components/Icons";
-import { CONTACT_EMAIL, LOCALITY, SERVICE_AREA, SITE_NAME } from "@/lib/site";
+import { MailIcon, PhoneIcon, PinIcon, CheckIcon } from "@/components/Icons";
+import { CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_HREF, LOCALITY, SERVICE_AREA, SITE_NAME } from "@/lib/site";
 
 export const metadata = {
   title: "Contact — Demander un devis",
@@ -30,6 +30,16 @@ export default function ContactPage() {
           <ContactForm />
 
           <div className="card" style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+            <div className="contact-info-row">
+              <div className="icon-badge"><PhoneIcon /></div>
+              <div>
+                <div style={{ fontWeight: 700, fontSize: 14.5 }}>Téléphone</div>
+                <a href={`tel:${CONTACT_PHONE_HREF}`} style={{ fontSize: 14.5, color: "var(--ink-2)", textDecoration: "none" }}>
+                  {CONTACT_PHONE}
+                </a>
+              </div>
+            </div>
+
             <div className="contact-info-row">
               <div className="icon-badge"><MailIcon /></div>
               <div>

@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { MenuIcon, CloseIcon } from "./Icons";
-import { SITE_NAME } from "@/lib/site";
+import { MenuIcon, CloseIcon, PhoneIcon } from "./Icons";
+import { CONTACT_PHONE, CONTACT_PHONE_HREF, SITE_NAME } from "@/lib/site";
 
 const NAV_LINKS = [
   { href: "/", label: "Accueil" },
@@ -30,6 +30,10 @@ export default function Header() {
         </nav>
 
         <div className="nav-actions">
+          <a href={`tel:${CONTACT_PHONE_HREF}`} className="btn btn-outline nav-phone">
+            <PhoneIcon />
+            {CONTACT_PHONE}
+          </a>
           <Link href="/contact" className="btn btn-primary">Demander un devis</Link>
           <button
             type="button"
