@@ -41,6 +41,9 @@ export const metadata = {
       "Artisan à Chamvres (Yonne) : rénovation intérieure et pose de cuisine sur-mesure, devis gratuit.",
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: "Ndb50ETT9K57Z9Nf1F6BHjAiPEn2QRM6dJYCpqiZktA",
+  },
   other: {
     "geo.position": `${GEO.latitude};${GEO.longitude}`,
     "geo.placename": LOCALITY,
