@@ -15,6 +15,7 @@ export default function JsonLd() {
     url: SITE_URL,
     email: CONTACT_EMAIL,
     telephone: CONTACT_PHONE_HREF,
+    image: `${SITE_URL}/images/realisations/cuisine-1.jpg`,
     description:
       "Artisan spécialisé en rénovation intérieure et pose de cuisine, basé à Chamvres dans l'Yonne.",
     address: {
