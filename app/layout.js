@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileCallBar from "@/components/MobileCallBar";
 import JsonLd from "@/components/JsonLd";
 import { GEO, LOCALITY, SITE_URL, SITE_NAME } from "@/lib/site";
 
@@ -66,6 +67,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <MobileCallBar />
       </body>
     </html>
   );

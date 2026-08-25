@@ -4,6 +4,7 @@ import {
   KitchenIcon, RenovationIcon, BathroomIcon, AtticIcon, InsulationIcon, PaintIcon, WindowIcon, CheckIcon,
 } from "@/components/Icons";
 import FaqJsonLd from "@/components/FaqJsonLd";
+import ServicesJsonLd from "@/components/ServicesJsonLd";
 import { FAQ_ITEMS, LOCALITY, SERVICE_AREA, SERVICES, TRUST_POINTS } from "@/lib/site";
 
 const ICONS = {
@@ -73,6 +74,7 @@ export default function HomePage() {
 
       <section className="section" id="services">
         <div className="wrap">
+          <ServicesJsonLd />
           <div className="section-head">
             <div className="eyebrow">Prestations</div>
             <h2>Un artisan, toutes les étapes de votre rénovation</h2>
