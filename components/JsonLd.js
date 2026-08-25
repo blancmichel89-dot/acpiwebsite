@@ -16,6 +16,7 @@ export default function JsonLd() {
     email: CONTACT_EMAIL,
     telephone: CONTACT_PHONE_HREF,
     image: `${SITE_URL}/images/realisations/cuisine-1.jpg`,
+    priceRange: "€",
     description:
       "Artisan spécialisé en rénovation intérieure et pose de cuisine, basé à Chamvres dans l'Yonne.",
     address: {
