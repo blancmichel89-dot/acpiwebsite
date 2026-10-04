@@ -33,7 +33,7 @@ export default function Footer() {
             <h4>Prestations</h4>
             <div className="footer-links">
               {SERVICES.slice(0, 5).map((s) => (
-                <Link key={s.slug} href={`/#${s.slug}`}>{s.title}</Link>
+                <Link key={s.slug} href={s.href || `/#${s.slug}`}>{s.title}</Link>
               ))}
             </div>
           </div>

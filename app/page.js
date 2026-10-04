@@ -93,6 +93,11 @@ export default function HomePage() {
                   <div className="icon-badge"><Icon /></div>
                   <h3>{s.title}</h3>
                   <p>{s.short}</p>
+                  {s.href && (
+                    <Link href={s.href} style={{ fontSize: 13.5, fontWeight: 700, color: "var(--chalk-2)", textDecoration: "none", marginTop: "auto" }}>
+                      En savoir plus →
+                    </Link>
+                  )}
                 </article>
               );
             })}

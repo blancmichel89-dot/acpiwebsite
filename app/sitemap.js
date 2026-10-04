@@ -1,7 +1,7 @@
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap() {
-  const routes = ["", "/realisations", "/contact"];
+  const routes = ["", "/realisations", "/contact", "/renovation-salle-de-bain"];
   const now = new Date();
 
   return routes.map((route) => ({
