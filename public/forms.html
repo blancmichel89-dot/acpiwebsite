@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Form detection</title></head>
+<body>
+  <!--
+    Netlify scans static HTML for forms at build time. Next.js renders the
+    real contact form client-side, so this plain, never-linked copy exists
+    only so Netlify's bot can detect the "contact" form and its fields.
+    See: https://docs.netlify.com/forms/setup/#javascript-rendered-forms
+  -->
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="phone" />
+    <textarea name="message"></textarea>
+    <input type="text" name="bot-field" />
+  </form>
+</body>
+</html>
