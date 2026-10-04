@@ -4,10 +4,10 @@
   --paper-3: #ffffff;
   --ink: #211f1b;
   --ink-2: #4a463e;
-  --ink-3: #8a8578;
+  --ink-3: #6b6658;
   --line: #dedacd;
   --chalk: #e3a600;
-  --chalk-2: #c98f00;
+  --chalk-2: #875c09;
   --chalk-ink: #3a2e00;
   --brick: #b5502d;
   --ok: #2f8f5b;
@@ -261,7 +261,7 @@ p { margin: 0; }
 .site-footer { border-top: 1px solid var(--line); background: var(--paper-2); padding: 56px 0 28px; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
-.footer-grid h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); margin-bottom: 14px; }
+.footer-heading { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); margin: 0 0 14px; }
 .footer-links { display: flex; flex-direction: column; gap: 10px; }
 .footer-links a { text-decoration: none; font-size: 14.5px; color: var(--ink-2); }
 .footer-links a:hover { color: var(--ink); }

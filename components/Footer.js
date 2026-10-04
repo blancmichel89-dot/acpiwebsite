@@ -19,18 +19,18 @@ export default function Footer() {
               chantier soigné.
             </p>
             <p style={{ marginTop: 16, fontSize: 14.5, color: "var(--ink-2)" }}>{FULL_ADDRESS}</p>
-            <p style={{ marginTop: 10, display: "flex", flexDirection: "column", gap: 6 }}>
-              <a href={`tel:${CONTACT_PHONE_HREF}`} style={{ fontSize: 14.5, fontWeight: 700, color: "var(--chalk-2)", textDecoration: "none" }}>
+            <p style={{ marginTop: 10, display: "flex", flexDirection: "column", gap: 4 }}>
+              <a href={`tel:${CONTACT_PHONE_HREF}`} style={{ display: "inline-block", padding: "6px 0", fontSize: 14.5, fontWeight: 700, color: "var(--chalk-2)", textDecoration: "none" }}>
                 {CONTACT_PHONE}
               </a>
-              <a href={`mailto:${CONTACT_EMAIL}`} style={{ fontSize: 14.5, fontWeight: 700, color: "var(--chalk-2)", textDecoration: "none" }}>
+              <a href={`mailto:${CONTACT_EMAIL}`} style={{ display: "inline-block", padding: "6px 0", fontSize: 14.5, fontWeight: 700, color: "var(--chalk-2)", textDecoration: "none" }}>
                 {CONTACT_EMAIL}
               </a>
             </p>
           </div>
 
           <div>
-            <h4>Prestations</h4>
+            <h3 className="footer-heading">Prestations</h3>
             <div className="footer-links">
               {SERVICES.slice(0, 5).map((s) => (
                 <Link key={s.slug} href={s.href || `/#${s.slug}`}>{s.title}</Link>
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>Zone d&apos;intervention</h4>
+            <h3 className="footer-heading">Zone d&apos;intervention</h3>
             <p style={{ fontSize: 14.5, color: "var(--ink-2)", lineHeight: 1.8 }}>
               {SERVICE_AREA.join(" · ")}
             </p>
